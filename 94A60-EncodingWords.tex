@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EncodingWords}
+\pmcreated{2013-03-22 19:06:09}
+\pmmodified{2013-03-22 19:06:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{encoding words}
+\pmrecord{20}{41995}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{94A60}
+\pmclassification{msc}{68Q05}
+\pmclassification{msc}{68Q45}
+\pmclassification{msc}{03D20}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\Sigma$ be an alphabet, and $\Sigma^*$ the set of all words over $\Sigma$.  An encoding of words over $\Sigma$ is, loosely speaking, an assignment of words to numbers such that the numbers uniquely identify the words.
+
+\textbf{Definition}.  An encoding for a language $L\subseteq \Sigma^*$ is a one-to-one function $E:L \to \mathbb{N}$.
+
+If $L$ is finite, then it is easy to find an encoding for $L$.  We are interested mainly in encoding infinite sets.  By the definition above, $L$ can not be encoded if it is uncountable.  We can therefore limit the discussion to $\Sigma$ that is at most countably infinite by listing some common methods of encoding $L$.
+
+Among the methods liststed, $\Sigma$ is an enumerated set $\lbrace a_1, a_2, \ldots \rbrace$.  In the first method, $\Sigma$ is assumed to be finite, and countably infinite in the last three.  In addition, $L$ is assumed to be $\Sigma^*$ in the first three methods.
+
+\textbf{Method 1}.  First, set $E(a_i):=i$.  In addition, for the empty word $\lambda$, we set $E(\lambda):=0$.  Next, inductively define $E(w)$ on the length of $w$.  Suppose now that $E(w)$ has been defiend.  Set $$E(wa):=n E(w)+E(a),\mbox{ where }a \in \Sigma.$$
+It is easy to see that if any non-empty word $w\in A$, with $w=b_1\cdots b_m$, where $b_i \in \Sigma$.  Then $$E(w)= E(b_1) n^{m-1} + \cdots + E(b_m).$$
+Then $E$ is an encoding of $L$.  This is really just the base-$n$ digital representation of integers, where each $a_i$ can be thought of as digits used by the representation.  The only difference here is that $0$ is not used as a ``digit'' (every letter gets mapped to a positive integer), except when the word is empty.  
+
+For example, let $\Sigma=\lbrace 0,1,\ldots,9\rbrace$.  Then the words $01, 001$, and $10$ have code numbers $12, 112$, and $21$.
+
+It is easy to see that the encoding is one-to-one (see proof \PMlinkname{here}{UniquenessOfDigitalRepresentation}).
+
+\textbf{Method 2}.  Pick three positive number $p,q,r$ such that $p,q$ are coprime, with $p>1$.  Set $E(a_i):=p^i$ and $E(\lambda):=1$.  Inductively define $E(w)$ on length of $w$.  Suppose now that $E(w)$ has been defined.  Then $$E(wa):=(rE(w)+q)E(a), \mbox{ where }a\in \Sigma.$$  
+For example, $E(a_2 a_5 a_3) = (r(rp^2+q)p^5+q)p^3 = r^2p^{10} + rq p^8 + q p^3$.
+
+To see that $E$ is injective, we make the following series of observations:
+\begin{enumerate}
+\item $E$ is injective on $\Sigma$.  In addition, either $E(a)|E(b)$ or $E(b)|E(a)$ for any $a,b\in \Sigma$. 
+\item $p|E(w)$ iff $w\ne \lambda$.  
+\item If $E(w)=E(a)$ for some $a\in \Sigma$, then $w=a$.  First, note that $w\ne 1$, and if $w\in \Sigma$, then $w=a$.  So suppose $w=vb$, with $b\in \Sigma$ and $v\ne \lambda$.  Then $(rE(v)+q)E(b)=E(a)$.  If $E(b)|E(a)$, then $rE(v)+q = p^i$.  Since $E(v)>1$, $i\ne 0$.  But if $i>0$, $p$ and $q$ would not be coprime as $p|E(v)$.  On the other hand, if $E(a)|E(b)$, then $(E(v)+q)p^j = 1$, again impossible.  So $w$ must be a letter, and therefore is $a$.
+\item Now, suppose $E(w)=E(v)$, and $E(a)|E(b)$, where $a,b$ are the rightmost letters of $w,v$ respectively.  By the same argument as previously, $a=b$, so we may cancel the letters, leaving us with the equation $E(w')=E(v')$, where $w=w'a$ and $v=v'b$.  Continue the process of canceling the last letters in pairs, we end up with $E(u)=E(c)$ for some letter $c\in \Sigma$.  So $u=c$.  This shows that $w=v$.
+\end{enumerate}
+
+A variation of this method is to set $E(aw):=(rE(w)+q)E(a)$.
+
+If we set $p=2$ and $r=q=1$, then the range of $E$ is the set of all positive integers.
+
+\textbf{Method 3}.  The third method utilizes the uniqueness of prime decomposition of integers.  First, define $f:\Sigma \to \mathbb{N}$ by $f(a_i)=i$.  Then, for any $w = b_1 \cdots b_m$, with $b_i\in \Sigma$, define $$E(w):= p_1 ^{f(b_1)} \cdots p_m^{f(b_m)}=\prod_{i=1}^m p_i^{f(b_i)},$$
+where $p_i$ is the $i$-th prime number (for example, $p_1=2$).  We again set $E(\lambda):=1$.  By the fundamental theorem of arithmetic, and the fact that $f$ is a bijection, $E$ is injective (and maps onto the set of positive integers).  This method is known as the multiplicative encoding of G\"odel.
+
+\textbf{Method 4}.  Once an encoding $E$ is found for $\Sigma^*$, an encoding for $L\subseteq \Sigma^*$ can be obtained by restricting the domain of $E$ to $L$.  Depending on how $L$ is defined, other methods of encoding $L$ via $E$ are possible.  We illustrate one example.
+
+Let $L=L_1 \cup L_2 \Sigma^*$, where $L_1,L_2$ are disjoint non-empty finite sets not containing the empty word.   Encode $L$ as follows: suppose $L_1 =\lbrace v_1, \ldots, v_m \rbrace$ and $L_2=\lbrace w_1, \ldots, w_n \rbrace$.  Define $E': L \to \mathbb{N}$ such that:
+\begin{enumerate}
+\item $E'(v_i):= 10^{i-1}$ and $E'(w_j):= 10^{m+j-1}$, where $i\in \lbrace 1,\ldots, m \rbrace$ and $j\in \lbrace 1,\ldots, n \rbrace$;
+\item $E'(w):= E'(w_j)E(u)10^{m+n-1}$, where $w=w_j u$, and $\lambda \ne u \in \Sigma^*$.
+\end{enumerate}
+Essentially, the first $m+n$ digits are reserved for encoding words $v_i$ and $w_j$.  $E'$ is easily seen to be injective.
+
+\textbf{Method 5}.  Let $L_2$ be the language consisting of all words of length $2$.  Define $E_2:L_2\to \mathbb{N}$ by $E_2(a_i a_j):= J(i,j)$, where $J$ is a pairing function that codes pairs of positive integers.  Since $J$ is an injection (actually maps onto the set of positive integers), so is $E_2$.  Using $J$, one can encode the language $L_3$ of all length $3$ words.  Define $E_3: L_2 \to \mathbb{N}$ by $E_3(a_i a_j a_k):= J(i,J(j,k))$.  Again, $E_3$ is an injection.  By induction, one can encode the language $L_n$ of all words of length $n$, for any positive integer $n$.
+
+\textbf{Method 6}.  Let $L(n)$ be the language consisting of all words of length at most $n$.  We can utilize Method 5 to code $L$.  First, let $\Sigma_1:=\Sigma \cup \lbrace a_0\rbrace$, where $a_0$ is a letter not in $\Sigma$.  Define $\phi: L(n)\to \Sigma_1^*$ by $\phi(w):= a_0^{n-|w|} w$, where $|w|$ is the length of $w$.  Then $\phi(L)\subseteq L_n$, the language of all length $n$ words over $\Sigma_1^*$.  It is easy to see that $\phi$ is one-to-one.  Then $E(n):=E_n \circ \phi$ is an encoding for $L$, where $E_n$ is defined in Method 5 that encodes $L_n$, via the modified version of the pairing function $J'(i,j):=J(i+1,j+1)$, where $i,j\ge 0$.
+
+\textbf{Method 7}.  Can Method 5 be used to encode $\Sigma^*$?  The answer is yes.  However, a direct extension of $E_n$ does not work.  By this we mean that $E:\Sigma^* \to \mathbb{N}$, given by $E(w)=E_n(w)$ where $|w|=n$, though a function, is not injective.  For any positive integer $m$, there is a word $w_n$ of length $n$ for every $n>0$, such that $E_n(w_n)=m$.  Instead, define $E$ so that $E(w):=E_2(|w|,E_{|w|}(w))$ if $w\ne \lambda$, and $E(\lambda):=0$.  It is easy to see that $E$ is injective, since both $E_2$ and $E_n$ are (in fact, $E$ is a bijection).
+
+\textbf{Remark}.  An encoding $E$ for $L$ can be thought of as a partial function from $\Sigma^*$ to $\mathbb{N}$, whose domain is $L\subseteq \Sigma^*$.  $E$ is said to be \emph{effective} if $E(L)$ is a recursive set.  Equivalently, the partial function $E^*$ on $\Sigma^*$ given by
+\begin{displaymath}
+E^*(w) = \left\{
+\begin{array}{ll}
+a_1^{E(w)} & \textrm{if } w\in L, \\
+\textrm{undefined} & \textrm{otherwise}.
+\end{array}
+\right.
+\end{displaymath}
+is Turing-computable.  An enumeration of $\Sigma$ can be thought of as an encoding for $\Sigma$.  If $\Sigma$ is finite, any enumeration of $\Sigma$ is effective.  Assume that $\Sigma$ is effectively enumerated, whether or not $\Sigma$ is finite (so that $a_1$ in the definition of $E^*$ can be effectively chosen).  Then it is not hard to see that all of the encodings described above are effective.  In fact, all of the sets $E(L)$ described are primitive recursive.
+%%%%%
+%%%%%
+\end{document}

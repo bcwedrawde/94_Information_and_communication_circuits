@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfMutualInformation}
+\pmcreated{2013-03-22 15:13:38}
+\pmmodified{2013-03-22 15:13:38}
+\pmowner{tdunning}{9331}
+\pmmodifier{tdunning}{9331}
+\pmtitle{derivation of mutual information}
+\pmrecord{5}{36994}
+\pmprivacy{1}
+\pmauthor{tdunning}{9331}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{94A17}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The maximum likelihood estimater for mutual information is identical (except for a scale factor) to the generalized log-likelihood ratio for multinomials and closely related to Pearson's 
+$\chi^2$ test.  This implies that the distribution of observed values of mutual information computed using maximum likelihood estimates for probabilities is $\chi^2$ distributed except for that scaling factor.
+
+In particular if we sample each of $X$ and $Y$ and combine the samples to form $N$ tuples sampled from $X \times Y$.  Now define $T(x, y)$ to be the total number of times the tuple $(x, y)$ was observed.  Further define $T(x, *)$ to be the number of times that a tuple starting with $x$ was observed and $T(*, y)$ to be the number of times that a tuple ending with $y$ was observed.  Clearly, $T(*, *)$ is just $N$, the number of tuples in the sample.  From the definition, the generalized log-likelihood ratio test of independence for $X$ and $Y$ (based on the sample of tuples) is 
+\begin{equation*}
+ -2 log \lambda = 
+2 \sum_{xy} T(x,y) \log \frac {\pi_{x|y}} {\mu_x}
+\end{equation*}
+where 
+\begin{equation*}
+\pi_{x|y} = T(x,y) / \sum_x T(x,y)
+\end{equation*}
+and 
+\begin{equation*}
+\mu_x = T(x,*) / T(*, *)
+\end{equation*}
+
+This allows the log-likelihood ratio to be expressed in terms of row and column sums,
+\begin{equation*}
+ -2 log \lambda = 
+2 \sum_{xy} T(x,y)
+\log {\frac
+    {T(x,y) T(*, *)}
+    {T(x, *) T(*, y) }
+}
+\end{equation*}
+This reduces to the following expression in terms of maximum likelihood estimates of cell, row and column probabilities,
+\begin{equation*}
+ -2 log \lambda = 
+2 \sum_{xy} T(x,y)
+\log {\frac
+    {\pi_{xy}}
+    { \mu_{*y} \mu_{x*} }
+}
+\end{equation*}
+This can be rearranged into 
+\begin{equation*}
+ -2 log \lambda = 
+2 N \left[
+  \sum_{xy} \pi_{xy} \log \pi_{xy}
+  \sum_{x} \mu_{x*} \log \mu_{x*}
+  \sum_{y} \mu_{*y} \log \mu_{*y}
+\right] = 2 N \hat I (X;Y)
+\end{equation*}
+where the hat indicates a maximum likelihood estimation of $I(X;Y)$.
+
+This also gives the asymptotic distribution of $\hat I(X;Y)$ as $2N$ times a $\chi^2$ deviate.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvolutionAssociativityOf}
+\pmcreated{2013-03-22 16:56:36}
+\pmmodified{2013-03-22 16:56:36}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{convolution, associativity of}
+\pmrecord{5}{39211}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{94A12}
+\pmclassification{msc}{44A35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{proposition*}{Proposition}
+\begin{document}
+\begin{proposition*}
+Convolution is associative.
+\end{proposition*}
+
+\begin{proof}
+
+Let $f$, $g$, and $h$ be measurable functions on the reals, and
+suppose the convolutions $(f*g)*h$ and $f*(g*h)$ exist.  We must show
+that $(f*g)*h = f*(g*h)$.  By the definition of convolution,
+\begin{align*}
+((f*g)*h)(u)
+&= \int_{\mathbb{R}} (f*g)(x) h(u-x)\,dx \\
+&= \int_{\mathbb{R}} \left[ \int_{\mathbb{R}} f(y) g(x-y)\,dy\right] h(u-x)\,dx \\
+&= \int_{\mathbb{R}} \int_{\mathbb{R}} f(y) g(x-y) h(u-x)\,dy\,dx.
+\end{align*}
+By Fubini's theorem we can switch the order of integration.  Thus
+\begin{align*}
+((f*g)*h)(u)
+&= \int_{\mathbb{R}} \int_{\mathbb{R}} f(y) g(x-y) h(u-x)\,dx\,dy \\
+&= \int_{\mathbb{R}} f(y) \left[\int_{\mathbb{R}} g(x-y) h(u-x)\,dx\right]\,dy.
+\end{align*}
+Now let us look at the inner integral.  By translation invariance,
+\begin{align*}
+\int_{\mathbb{R}} g(x-y) h(u-x)\,dx 
+&= \int_{\mathbb{R}} g((x+y)-y) h(u-(x+y))\,dx \\
+&= \int_{\mathbb{R}} g(x) h((u-y)-x)\,dx \\
+&= (g*h)(u-y).
+\end{align*}
+So we have shown that
+\[
+((f*g)*h)(u) = \int_{\mathbb{R}} f(y)(g*h)(u-y)\,dy,
+\]
+which by definition is $(f*(g*h))(u)$.  Hence convolution is associative.
+\end{proof}
+
+\PMlinkescapeword{inner}
+\PMlinkescapeword{order}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfHartleyFunction}
+\pmcreated{2013-03-22 14:32:15}
+\pmmodified{2013-03-22 14:32:15}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{derivation of Hartley function}
+\pmrecord{11}{36082}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{94A17}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{property}
+\PMlinkescapeword{satisfy}
+
+We want to show that the Hartley function $\log_2(n)$ is the only
+function mapping natural numbers to real numbers that
+\PMlinkescapetext{satisfies}
+\begin{enumerate}
+\item $H(mn) = H(m)+H(n)$ (\PMlinkescapetext{additivity}),
+
+\item $H(m) \leq H(m+1)$ (monotonicity), and
+
+\item $H(2)=1$  (normalization).
+\end{enumerate}
+
+Let $f$ be a function on positive integers that satisfies the above three properties. Using the additive property, it is easy to see that the value of $f(1)$ must be zero. So we want to show that $f(n) = \log_2(n)$ for all integers $n\geq 2$.
+
+
+From the additive property, we can show that for any integer $n$
+and $k$,
+\begin{equation}
+f(n^k) = kf(n).
+\end{equation}
+
+
+Let $a>2$  be an integer.  Let $t$ be any positive integer. There is a unique
+integer $s$ determined by
+\[
+  a^s \leq 2^t < a^{s+1}.
+\]
+Therefore,
+\[
+  s \log_2 a\leq t < (s+1) \log_2 a
+\]
+and
+\[
+ \frac{s}{t} \leq \frac{1}{\log_2 a} < \frac{s+1}{t}.
+\]
+
+On the other hand, by monotonicity,
+\[
+ f(a^s) \leq f(2^t) \leq f(a^{s+1}).
+\]
+Using Equation (1) and $f(2)=1$, we get
+\[
+ s f(a) \leq t  \leq (s+1) f(a),
+\]
+and
+\[
+ \frac{s}{t} \leq \frac{1}{f(a)} \leq \frac{s+1}{t}.
+\]
+
+Hence,
+\[
+ \Big| \frac{1}{f(a)} - \frac{1}{\log_2(a)} \Big| \leq
+ \frac{1}{t}.
+\]
+
+Since $t$ can be arbitrarily large, the difference on the left
+hand \PMlinkescapetext{side} of the above inequality must be zero,
+\[
+ f(a) = \log_2(a).
+\]
+
+%%%%%
+%%%%%
+\end{document}

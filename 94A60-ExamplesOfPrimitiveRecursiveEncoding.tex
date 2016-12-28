@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfPrimitiveRecursiveEncoding}
+\pmcreated{2013-03-22 19:06:23}
+\pmmodified{2013-03-22 19:06:23}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{examples of primitive recursive encoding}
+\pmrecord{8}{41999}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{94A60}
+\pmclassification{msc}{68Q45}
+\pmclassification{msc}{68Q05}
+\pmclassification{msc}{03D20}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry, we present three examples of primitive recursive encodings.  In all the examples, the following notations are used: $\mathbb{N}$ is the set of all natural numbers (including $0$), $\mathbb{N}^*$ is the set of all finite sequences over $\mathbb{N}$, and $E:\mathbb{N}^* \to \mathbb{N}$ is the encoding in question.  For any sequence $a_1, \ldots, a_k$, its image under $E$ is denoted by $\langle a_1, \ldots, a_k \rangle$, and is called the sequence number corresponding to $a_1, \ldots, a_k$.  Furthermore, $()$ denotes the empty sequence, and its sequence number is denoted by $\langle \rangle$.  The fact that the $E$ in each of the examples below is in fact encoding is proved in \PMlinkname{this entry}{EncodingWords}.
+
+\textbf{Example 1}.  (Multiplicative encoding)  $E$ is defined as follows: 
+\begin{eqnarray*}
+\langle \rangle &:=& 1, \\
+\langle a_1 , \ldots, a_k \rangle &:=&  p_1 ^ {s(a_1)} \cdots p_k ^ {s(a_k)},
+\end{eqnarray*}
+where $s$ is the successor function, and $p_1, \ldots, p_k$ are the first $k$ prime numbers.
+
+To see that $E$ is primitive recursive, we verify the following:
+\begin{itemize}
+\item the predicate ``$x$ is a sequence number'' is primitive recursive: a number $x\in \mathbb{N}$ is a sequence number iff $x=1$ or, if $p|x$ for some prime $p$, then $q|x$ for any prime $q\le p$.  The predicates 
+$$\Phi_1:= ``p|x\mbox{ for some prime }p \mbox{''} \equiv ``\exists p\le x (P(p) \wedge (p|x))\mbox{''},$$
+$$\Phi_2:= ``p\mbox{ is prime and }q|x\mbox{ for all primes }q\le p\mbox{''} \equiv ``\forall q\le p (P(p)\wedge P(q) \wedge (q|x))\mbox{''}$$
+where $P(r):=$ ``$r$ is prime'', are primitive recursive by bounded quantification.  Thus ``$x$ is a sequence number'' iff ``$x=1$ or $\Phi_1 \rightarrow \Phi_2$'' iff ``$(x=1) \vee (\neg \Phi_1 \vee \Phi_2)$'', is primitive recursive as a result.
+\item $E_k(a_1,\ldots,a_k):= p_1 ^ {s(a_1)} \cdots p_k ^ {s(a_k)}$ is clearly primitive recursive.
+\item $\operatorname{lh}(x)$ can be defined as the number of primes dividing $x$, which is primitive recursive.
+\item $(x)_y$ can be defined as the exponent of the $y$-th prime in $x$ (the largest power of $p_y$ dividing $x$), which is again primitive recursive.
+\end{itemize}
+
+\textbf{Example 2}.  (Encoding via a pairing function)  First, let $J: \mathbb{N}^2 \to \mathbb{N}$ be a (primitive recursive) pairing function.  For any $n \ge 2$, define 
+\begin{eqnarray*}
+J_2(x_1,x_2) &:=&  J(x_1, x_2) \\
+J_{n+1}(x_1,\ldots, x_n, x_{n+1}) &:=& J( x_1, J_n(x_2, \ldots, x_{n+1})).
+\end{eqnarray*}
+Then define $E$ by
+\begin{eqnarray*}
+\langle \rangle &:=& 0, \\
+\langle a_1 , \ldots, a_k \rangle &:=&  J(k, J_k(a_1, \ldots, a_k)).
+\end{eqnarray*}
+
+$E$ is primitive recursive because
+\begin{itemize}
+\item $E$ is a bijection, so the predicate ``$x$ is a sequence number'' is the same as ``$x \in \mathbb{N}$'', which is clearly primitive recursive,
+\item $E_k(a_1,\ldots,a_k):= J(k, J_k(a_1, \ldots, a_k))$ is primitive recursive since both $J$ and $J_k$ are, the latter of which can be shown to be primitive recursive by induction,
+\item The two functions $R,L: \mathbb{N}\to \mathbb{N}$ such that $J(L(m),R(m))=m$ are primitive recursive.  So  $\operatorname{lh}(x)=L(x)$ in particular is primitive recursive.
+\item If $J_k(a_1,\ldots, a_k)=b$, then $a_1=L(b), a_2=LRL(b), \ldots, a_{k-1} = (LR)^{k-2}L(b)$, and $a_k = R(LR)^{k-2}L(b)$.  Thus, 
+\begin{displaymath}
+(x)_y = \left\{
+\begin{array}{ll}
+(LR)^y(x) & \textrm{if } y < L(x) , \\
+R(LR)^y(x) & \textrm{if } y = L(x), \\
+0 & \textrm{otherwise}.
+\end{array}
+\right.
+\end{displaymath}
+is primitive recursive, since each case is primitive recursive.
+\end{itemize}
+
+\textbf{Example 3}.  (Digital Representation)  Pick a positive integers $p>1$.  Define $E$ by
+\begin{eqnarray*}
+\langle \rangle &:=& 1 \\
+\langle a \rangle &:=& p^{s(a)} \\
+\langle a_1 , \ldots, a_k, a_{k+1} \rangle &:=&  \langle a_1 \rangle(\langle a_2,\ldots, a_{k+1} \rangle +1).
+\end{eqnarray*}
+In other words, 
+\begin{equation}
+\langle a_1 , \ldots, a_k \rangle = p^{s(a_1)} + p^{s(a_1)+s(a_2)} + \cdots p^{s(a_1) + \cdots + s(a_k)}.
+\end{equation}
+To see that $E$ is primitive recursive, we first define three functions $f:\mathbb{N}\to \mathbb{N}$ given by $f(x):=\operatorname{lo}(p,x)$, the exponent of $p$ in $x$, $g:\mathbb{N}\to \mathbb{N}$ given by $g(x):=\operatorname{quo}(x,p^{f(x)})\dot{-}1$, and $h:\mathbb{N}^2 \to \mathbb{N}$ given by
+\begin{eqnarray*}
+h(x,0) &:=& x \\
+h(x,n+1) &:=&  g(h(x,n)).
+\end{eqnarray*}
+Clearly, $f,g,h$ are all primitive recursive.  Furthermore, $h$ has the property that if $h(x,n)>0$, then $h(x,n+1)<h(x,n)$, and therefore $h(x,n)=0$ for large enough $n$.  Using $h$, we may proceed to show that $E$ is primitive recursive:
+\begin{itemize}
+\item the predicate ``$x$ is a sequence number'' is equivalent to the predicate 
+\begin{center}
+``$(x=1) \vee ((x>0) \wedge (\forall n \; p|h(x,n)))$'' 
+\end{center} which is equivalent to the predicate
+\begin{center}
+``$(x=1) \vee ((x>0) \wedge (\forall n\le x \; p|h(x,n)))$'' 
+\end{center} 
+since $p>1$.  As the quantification is bounded, the predicate is primitive recursive.
+\item $E_k(a_1,\ldots,a_k)=\langle a_1,\ldots, a_k\rangle$ is primitive recursive by equation (1) above.
+\item $\operatorname{lh}(x)$ can be defined as the number of $n$ such that $h(x,n)\ne 0$, or $$\sum_{i=0}^x \operatorname{sgn}(h(x,i)),$$ which is primitive recursive, because it is a bounded sum.
+\item If $\langle a_1, \ldots, a_k \rangle =x$, then $f(h(x,0))=s(a_1), \ldots, f(h(x,k-1))=s(a_k)$.  Therefore, $(x)_y$ is just $f(h(x,y\dot{-}1))\dot{-}1$, which is primitive recursive.
+\end{itemize}
+
+\textbf{Remark}.  In the third example, $E$ can be more generally defined so that $$\langle a_1 , \ldots, a_k, a_{k+1} \rangle :=  \langle a_1 \rangle(r\langle a_2,\ldots, a_{k+1} \rangle +q),$$ provided that $p,q$ are coprime.  It is fairly straightforward to show that $E$ is again primitive recursive.
+%%%%%
+%%%%%
+\end{document}
