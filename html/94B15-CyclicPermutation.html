@@ -1,0 +1,245 @@
+<!DOCTYPE html><html>
+<head>
+<title>cyclic permutation</title>
+<!--Generated on Sat Feb 10 13:43:19 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">cyclic permutation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="A=\{a_{0},a_{1},\ldots,a_{n-1}\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">}</mo></mrow></mrow></math> be a finite set indexed by <math id="p1.m2" class="ltx_Math" alttext="i=0,\ldots,n-1" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></mrow></math>. A <em class="ltx_emph ltx_font_italic">cyclic permutation</em> on <math id="p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a permutation <math id="p1.m4" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> on <math id="p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> such that, for some integer <math id="p1.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\pi(a_{i})=a_{(i+k)\!\!\!\!\!\!\pmod{n}}," display="block"><mrow><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>a</mi><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>+</mo><mi>k</mi></mrow><mo rspace="0pt" stretchy="false">)</mo></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m7" class="ltx_Math" alttext="a\!\!\pmod{b}:=a-\lfloor a/b\rfloor b" display="inline"><mrow><mrow><mpadded width="-3.3pt"><mi>a</mi></mpadded><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>a</mi><mo>-</mo><mrow><mrow><mo stretchy="false">⌊</mo><mrow><mi>a</mi><mo>/</mo><mi>b</mi></mrow><mo stretchy="false">⌋</mo></mrow><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow></math>, the remainder of <math id="p1.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> when divided by <math id="p1.m9" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, and <math id="p1.m10" class="ltx_Math" alttext="\lfloor\cdot\rfloor" display="inline"><mrow><mo stretchy="false">⌊</mo><mo>⋅</mo><mo stretchy="false">⌋</mo></mrow></math> is the floor function.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">For example, if <math id="p2.m1" class="ltx_Math" alttext="A=\{1,2,\ldots,m\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi><mo stretchy="false">}</mo></mrow></mrow></math> such that <math id="p2.m2" class="ltx_Math" alttext="a_{i}=i+1" display="inline"><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>. Then a cyclic permutation <math id="p2.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> on <math id="p2.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has the form</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\pi(1)" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle r" display="inline"><mi>r</mi></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle\pi(2)" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle r+1" display="inline"><mrow><mi>r</mi><mo>+</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle\pi(m-r+1)" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>m</mi><mo>-</mo><mi>r</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle m" display="inline"><mi>m</mi></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\pi(m-r+2)" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>m</mi><mo>-</mo><mi>r</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle 1" display="inline"><mn>1</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle\pi(m)" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle r-1." display="inline"><mrow><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In the usual permutation notation, it looks like</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\pi=\left(\begin{array}[]{ccccccc}1&amp;2&amp;\cdots&amp;m-r+1&amp;m-r+2&amp;\cdots&amp;m\\
+r&amp;r+1&amp;\cdots&amp;m&amp;1&amp;\cdots&amp;r-1\end{array}\right)" display="block"><mrow><mi>π</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><mrow><mrow><mi>m</mi><mo>-</mo><mi>r</mi></mrow><mo>+</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mrow><mrow><mi>m</mi><mo>-</mo><mi>r</mi></mrow><mo>+</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><mi>m</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>r</mi></mtd><mtd columnalign="center"><mrow><mi>r</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><mi>m</mi></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. For every finite set of cardinality <math id="p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, there are <math id="p4.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> cyclic permutations. Each non-trivial cyclic permutation has order <math id="p4.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Furthermore, if <math id="p4.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a prime number, the set of cyclic permutations forms a cyclic group.</p>
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Cyclic permutations on words</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Given a word <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="w=a_{1}a_{2}\cdots a_{n}" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow></math> on a set <math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math> (may or may not be finite), a <em class="ltx_emph ltx_font_italic">cyclic conjugate</em> of <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> is a word <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> derived from <math id="S0.SS0.SSSx1.p1.m5" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> based on a cyclic permutation. In other words, <math id="S0.SS0.SSSx1.p1.m6" class="ltx_Math" alttext="v=\pi(a_{1})\pi(a_{2})\cdots\pi(a_{n})" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for some cyclic permutation <math id="S0.SS0.SSSx1.p1.m7" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> on <math id="S0.SS0.SSSx1.p1.m8" class="ltx_Math" alttext="\{a_{1},\ldots,a_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math>. Equivalently, <math id="S0.SS0.SSSx1.p1.m9" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and <math id="S0.SS0.SSSx1.p1.m10" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> are cyclic conjugates of one another iff <math id="S0.SS0.SSSx1.p1.m11" class="ltx_Math" alttext="w=st" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math> and <math id="S0.SS0.SSSx1.p1.m12" class="ltx_Math" alttext="v=ts" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mi>s</mi></mrow></mrow></math> for some words <math id="S0.SS0.SSSx1.p1.m13" class="ltx_Math" alttext="s,t" display="inline"><mrow><mi>s</mi><mo>,</mo><mi>t</mi></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p2" class="ltx_para">
+<p class="ltx_p">For example, the cyclic conjugates of the word <math id="S0.SS0.SSSx1.p2.m1" class="ltx_Math" alttext="ababa" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow></math> over <math id="S0.SS0.SSSx1.p2.m2" class="ltx_Math" alttext="\{a,b\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></math> are</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="baba^{2},\quad aba^{2}b,\quad ba^{2}ba,\quad a^{2}bab,\quad\mbox{and itself}." display="block"><mrow><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo rspace="12.5pt">,</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><mi>b</mi></mrow><mo rspace="12.5pt">,</mo><mrow><mi>b</mi><mo>⁢</mo><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow><mo rspace="12.5pt">,</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo rspace="12.5pt">,</mo><mtext>and itself</mtext></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Strictly speaking, <math id="S0.SS0.SSSx1.p2.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> is a cyclic permutation on the <em class="ltx_emph ltx_font_italic">multiset</em> <math id="S0.SS0.SSSx1.p2.m4" class="ltx_Math" alttext="A=\{a_{1},\ldots,a_{n}\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math>, which can be thought of as a cyclic permutation on the set <math id="S0.SS0.SSSx1.p2.m5" class="ltx_Math" alttext="A^{\prime}=\{(1,a_{1}),\ldots,(n,a_{n})\}" display="inline"><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Furthermore, <math id="S0.SS0.SSSx1.p2.m6" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> can be extended to a function on <math id="S0.SS0.SSSx1.p2.m7" class="ltx_Math" alttext="A^{*}" display="inline"><msup><mi>A</mi><mo>*</mo></msup></math>: for every word <math id="S0.SS0.SSSx1.p2.m8" class="ltx_Math" alttext="w=a_{\phi(1)}\cdots a_{\phi(m)}" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><msub><mi>a</mi><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>a</mi><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow></mrow></math>, <math id="S0.SS0.SSSx1.p2.m9" class="ltx_Math" alttext="\pi(w):=\pi(a_{\phi(1)})\cdots\pi(a_{\phi(m)})" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="S0.SS0.SSSx1.p2.m10" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is a permutation on <math id="S0.SS0.SSSx1.p2.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p3" class="ltx_para">
+<p class="ltx_p">Given any word <math id="S0.SS0.SSSx1.p3.m1" class="ltx_Math" alttext="w=a_{1}a_{2}\cdots a_{n}" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow></math> on <math id="S0.SS0.SSSx1.p3.m2" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math>, two cyclic permutations <math id="S0.SS0.SSSx1.p3.m3" class="ltx_Math" alttext="\pi_{1},\pi_{2}" display="inline"><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>,</mo><msub><mi>π</mi><mn>2</mn></msub></mrow></math> on <math id="S0.SS0.SSSx1.p3.m4" class="ltx_Math" alttext="\{a_{1},\ldots,a_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> are said to be the <em class="ltx_emph ltx_font_italic">same</em> if <math id="S0.SS0.SSSx1.p3.m5" class="ltx_Math" alttext="\pi_{1}(w)=\pi_{2}(w)" display="inline"><mrow><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>π</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. For example, with the word <math id="S0.SS0.SSSx1.p3.m6" class="ltx_Math" alttext="abab" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></math>, then the cyclic permutation</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\left(\begin{array}[]{cccc}1&amp;2&amp;3&amp;4\\
+3&amp;4&amp;1&amp;2\end{array}\right)" display="block"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mn>4</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mn>4</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is the same as the identity permutation. There is a one-to-one correspondence between the set of all cyclic conjugates of <math id="S0.SS0.SSSx1.p3.m7" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> and the set of all <em class="ltx_emph ltx_font_italic">distinct</em> cyclic permutations on <math id="S0.SS0.SSSx1.p3.m8" class="ltx_Math" alttext="\{a_{0},a_{1},\ldots,a_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">In a group <math id="I1.i1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, if two elements <math id="I1.i1.p1.m2" class="ltx_Math" alttext="u,v" display="inline"><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow></math> are cyclic conjugates of one another, then they are conjugates: for if <math id="I1.i1.p1.m3" class="ltx_Math" alttext="u=st" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math> and <math id="I1.i1.p1.m4" class="ltx_Math" alttext="v=ts" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mi>s</mi></mrow></mrow></math>, then <math id="I1.i1.p1.m5" class="ltx_Math" alttext="v=t(st)t^{-1}=tut^{-1}" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Cyclic permutations were used as a ciphering scheme by Julius Caesar. Given an alphabet with letters, say <math id="I1.i2.p1.m1" class="ltx_Math" alttext="a,b,c,\ldots,x,y,z" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></math>, messages in letters are encoded so that each letter is shifted by three places. For example, the name</p>
+<p class="ltx_p ltx_align_center">“Julius Caesar” becomes “Mxolxv Fdhvdu”.</p>
+<p class="ltx_p">A ciphering scheme based on cyclic permutations is therefore also known as a <em class="ltx_emph ltx_font_italic">Caesar shift cipher</em>.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">cyclic permutation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CyclicPermutation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:33:54</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:33:54</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 94B15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20B99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05A05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11Z05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 94A60</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Caesar cipher</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CyclicCode</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SubgroupsWithCoprimeOrders</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Caesar shift cipher</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">cyclic conjugate</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:43:19 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

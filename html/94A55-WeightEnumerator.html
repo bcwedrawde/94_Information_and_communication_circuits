@@ -1,0 +1,197 @@
+<!DOCTYPE html><html>
+<head>
+<title>weight enumerator</title>
+<!--Generated on Sat Feb 10 13:42:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">weight enumerator</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an alphabet and <math id="p1.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> a finite subset of <math id="p1.m3" class="ltx_Math" alttext="A^{*}" display="inline"><msup><mi>A</mi><mo>*</mo></msup></math>.
+Then the <em class="ltx_emph ltx_font_italic">complete weight enumerator</em> of <math id="p1.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, denoted by
+<math id="p1.m5" class="ltx_Math" alttext="\operatorname{cwe}_{C}" display="inline"><msub><mi>cwe</mi><mi>C</mi></msub></math>, is the polynomial in <math id="p1.m6" class="ltx_Math" alttext="|A|" display="inline"><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow></math> indeterminates <math id="p1.m7" class="ltx_Math" alttext="X_{a}" display="inline"><msub><mi>X</mi><mi>a</mi></msub></math> labeled by
+the letters of <math id="p1.m8" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> with integer coefficients defined by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\operatorname{cwe}_{C}((X_{a})_{a\in A}):=\sum\limits_{c\in C}\prod\limits_{a%
+\in A}X_{a}^{\operatorname{wt}_{a}(c)}," display="block"><mrow><mrow><mrow><msub><mi>cwe</mi><mi>C</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>a</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>c</mi><mo>∈</mo><mi>C</mi></mrow></munder><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></munder><msubsup><mi>X</mi><mi>a</mi><mrow><msub><mi>wt</mi><mi>a</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></msubsup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m9" class="ltx_Math" alttext="\operatorname{wt}_{a}(c)" display="inline"><mrow><msub><mi>wt</mi><mi>a</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the <math id="p1.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>-weight of the string <math id="p1.m11" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">If <math id="p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an abelian group, one defines the <em class="ltx_emph ltx_font_italic">Hamming weight
+enumerator</em> of <math id="p2.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, denoted by <math id="p2.m3" class="ltx_Math" alttext="\operatorname{we}_{C}" display="inline"><msub><mi>we</mi><mi>C</mi></msub></math>, as a polynomial in only two
+indeterminates <math id="p2.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="p2.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\operatorname{we}_{C}(X,Y):=\operatorname{cwe}_{C}((X_{a})_{a\in A})|_{\begin{%
+array}[]{l}\scriptstyle X_{0}=X\\
+\scriptstyle X_{a}=Y\text{ if
+}a\neq 0\end{array}}," display="block"><mrow><mrow><mrow><msub><mi>we</mi><mi>C</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><msub><mrow><mrow><msub><mi>cwe</mi><mi>C</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>a</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mtable rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msub><mi>X</mi><mn>0</mn></msub><mo>=</mo><mi>X</mi></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msub><mi>X</mi><mi>a</mi></msub><mo>=</mo><mrow><mi>Y</mi><mo>⁢</mo><mtext> if </mtext><mo>⁢</mo><mi>a</mi></mrow><mo>≠</mo><mn>0</mn></mrow></mtd></mtr></mtable></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">that is one distinguishes only between zero and the non-zero letters
+of the strings in <math id="p2.m6" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">If <math id="p3.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is a code of block length <math id="p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, then both <math id="p3.m3" class="ltx_Math" alttext="\operatorname{cwe}_{C}" display="inline"><msub><mi>cwe</mi><mi>C</mi></msub></math> and <math id="p3.m4" class="ltx_Math" alttext="\operatorname{we}_{C}" display="inline"><msub><mi>we</mi><mi>C</mi></msub></math>
+are <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/6577</span>homogeneous of degree <math id="p3.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Therefore, one can set <math id="p3.m6" class="ltx_Math" alttext="Y=1" display="inline"><mrow><mi>Y</mi><mo>=</mo><mn>1</mn></mrow></math> in <math id="p3.m7" class="ltx_Math" alttext="\operatorname{we}_{C}" display="inline"><msub><mi>we</mi><mi>C</mi></msub></math>
+in this case without losing information. The resulting polynomial can
+be uniquely rewritten in the form</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\operatorname{we}_{C}(X,1)=\sum\limits_{i=0}^{n}A_{i}X^{n-i}," display="block"><mrow><mrow><mrow><msub><mi>we</mi><mi>C</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>X</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the sequence <math id="p3.m8" class="ltx_Math" alttext="A_{0},\ldots A_{n}" display="inline"><mrow><msub><mi>A</mi><mn>0</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></mrow></math> defining the <em class="ltx_emph ltx_font_italic">Hamming weight
+distribution</em>. Analogously, one can define more general weight
+distributions by setting all but one indeterminate in
+<math id="p3.m9" class="ltx_Math" alttext="\operatorname{cwe}_{C}((X_{a})_{a\in A})" display="inline"><mrow><msub><mi>cwe</mi><mi>C</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>a</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> equal to one.</p>
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Examples</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i1.p1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> be the ternary (that is <math id="I1.i1.p1.m2" class="ltx_Math" alttext="A=\mathbb{F}_{3}=\{0,1,2\}" display="inline"><mrow><mi>A</mi><mo>=</mo><msub><mi>𝔽</mi><mn>3</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math>) linear
+code of block length <math id="I1.i1.p1.m3" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math>  the vectors <math id="I1.i1.p1.m4" class="ltx_Math" alttext="(1,1,1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>, <math id="I1.i1.p1.m5" class="ltx_Math" alttext="(1,1,0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>
+and <math id="I1.i1.p1.m6" class="ltx_Math" alttext="(1,0,1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>. Then</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\operatorname{cwe}_{C}(X_{0},X_{1},X_{2})=X_{0}^{4}+4X_{0}^{2}X_{1}^{2}+4X_{0}%
+^{2}X_{1}X_{2}+4X_{0}^{2}X_{2}^{2}+4X_{0}X_{1}^{2}X_{2}+4X_{0}X_{1}X_{2}^{2}+X%
+_{1}^{4}+4X_{1}^{2}X_{2}^{2}+X_{2}^{4}" display="block"><mrow><mrow><msub><mi>cwe</mi><mi>C</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>0</mn></msub><mo>,</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><msub><mi>X</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mi>X</mi><mn>0</mn><mn>4</mn></msubsup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msubsup><mi>X</mi><mn>0</mn><mn>2</mn></msubsup><mo>⁢</mo><msubsup><mi>X</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msubsup><mi>X</mi><mn>0</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>X</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>X</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msubsup><mi>X</mi><mn>0</mn><mn>2</mn></msubsup><mo>⁢</mo><msubsup><mi>X</mi><mn>2</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>X</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi>X</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>X</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>X</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>X</mi><mn>1</mn></msub><mo>⁢</mo><msubsup><mi>X</mi><mn>2</mn><mn>2</mn></msubsup></mrow><mo>+</mo><msubsup><mi>X</mi><mn>1</mn><mn>4</mn></msubsup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msubsup><mi>X</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msubsup><mi>X</mi><mn>2</mn><mn>2</mn></msubsup></mrow><mo>+</mo><msubsup><mi>X</mi><mn>2</mn><mn>4</mn></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and
+</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\operatorname{we}_{C}(X,Y)=X^{4}+12X^{2}Y^{2}+8XY^{3}+6Y^{4}" display="block"><mrow><mrow><msub><mi>we</mi><mi>C</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>X</mi><mn>4</mn></msup><mo>+</mo><mrow><mn>12</mn><mo>⁢</mo><msup><mi>X</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>Y</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>8</mn><mo>⁢</mo><mi>X</mi><mo>⁢</mo><msup><mi>Y</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msup><mi>Y</mi><mn>4</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the Hamming weight distribution is <math id="I1.i1.p1.m7" class="ltx_Math" alttext="1,0,12,8,6" display="inline"><mrow><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>12</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>6</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The Hamming weight enumerator of the full binary code of length
+<math id="I1.i2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathbb{F}_{2}^{n}" display="inline"><msubsup><mi>𝔽</mi><mn>2</mn><mi>n</mi></msubsup></math>, is simply given by
+<math id="I1.i2.p1.m3" class="ltx_Math" alttext="\operatorname{we}_{\mathbb{F}_{2}^{n}}(X,Y)=(X+Y)^{n}" display="inline"><mrow><mrow><msub><mi>we</mi><msubsup><mi>𝔽</mi><mn>2</mn><mi>n</mi></msubsup></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></math>, and the Hamming weight
+distribution is the <math id="I1.i2.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-th  of Pascal’s triangle.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">weight enumerator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">WeightEnumerator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:13:23</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:13:23</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GrafZahl (9234)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GrafZahl (9234)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GrafZahl (9234)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 94A55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 94B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Hamming weight enumerator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">KleeneStar</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LinearCode</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">complete weight enumerator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">weight distribution</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Hamming weight distribution</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:42:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

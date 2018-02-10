@@ -1,0 +1,344 @@
+<!DOCTYPE html><html>
+<head>
+<title>examples of primitive recursive encoding</title>
+<!--Generated on Sat Feb 10 13:42:48 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">examples of primitive recursive encoding</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In this entry, we present three examples of primitive recursive encodings. In all the examples, the following notations are used: <math id="p1.m1" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> is the set of all natural numbers (including <math id="p1.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>), <math id="p1.m3" class="ltx_Math" alttext="\mathbb{N}^{*}" display="inline"><msup><mi>ℕ</mi><mo>*</mo></msup></math> is the set of all finite sequences over <math id="p1.m4" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math>, and <math id="p1.m5" class="ltx_Math" alttext="E:\mathbb{N}^{*}\to\mathbb{N}" display="inline"><mrow><mi>E</mi><mo>:</mo><mrow><msup><mi>ℕ</mi><mo>*</mo></msup><mo>→</mo><mi>ℕ</mi></mrow></mrow></math> is the encoding in question. For any sequence <math id="p1.m6" class="ltx_Math" alttext="a_{1},\ldots,a_{k}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub></mrow></math>, its image under <math id="p1.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is denoted by <math id="p1.m8" class="ltx_Math" alttext="\langle a_{1},\ldots,a_{k}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">⟩</mo></mrow></math>, and is called the sequence number corresponding to <math id="p1.m9" class="ltx_Math" alttext="a_{1},\ldots,a_{k}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub></mrow></math>. Furthermore, <math id="p1.m10" class="ltx_Math" alttext="()" display="inline"><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo></mrow></math> denotes the empty sequence, and its sequence number is denoted by <math id="p1.m11" class="ltx_Math" alttext="\langle\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mo stretchy="false">⟩</mo></mrow></math>. The fact that the <math id="p1.m12" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> in each of the examples below is in fact encoding is proved in this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/EncodingWords</span>).</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 1</span>. (Multiplicative encoding) <math id="p2.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is defined as follows:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\langle\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle 1," display="inline"><mrow><mn>1</mn><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\langle a_{1},\ldots,a_{k}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle p_{1}^{s(a_{1})}\cdots p_{k}^{s(a_{k})}," display="inline"><mrow><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></msubsup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msubsup><mi>p</mi><mi>k</mi><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></msubsup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> is the successor function, and <math id="p2.m3" class="ltx_Math" alttext="p_{1},\ldots,p_{k}" display="inline"><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>k</mi></msub></mrow></math> are the first <math id="p2.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> prime numbers.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">To see that <math id="p3.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is primitive recursive, we verify the following:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">the predicate “<math id="I1.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a sequence number” is primitive recursive: a number <math id="I1.i1.p1.m2" class="ltx_Math" alttext="x\in\mathbb{N}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> is a sequence number iff <math id="I1.i1.p1.m3" class="ltx_Math" alttext="x=1" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> or, if <math id="I1.i1.p1.m4" class="ltx_Math" alttext="p|x" display="inline"><mrow><mi>p</mi><mo stretchy="false">|</mo><mi>x</mi></mrow></math> for some prime <math id="I1.i1.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, then <math id="I1.i1.p1.m6" class="ltx_Math" alttext="q|x" display="inline"><mrow><mi>q</mi><mo stretchy="false">|</mo><mi>x</mi></mrow></math> for any prime <math id="I1.i1.p1.m7" class="ltx_Math" alttext="q\leq p" display="inline"><mrow><mi>q</mi><mo>≤</mo><mi>p</mi></mrow></math>. The predicates</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\Phi_{1}:=``p|x\mbox{ for some prime }p\mbox{''}\equiv``\exists p\leq x(P(p)%
+\wedge(p|x))\mbox{''}," display="block"><mrow><msub><mi mathvariant="normal">Φ</mi><mn>1</mn></msub><mo>:=</mo><mi mathvariant="normal">`</mi><mi mathvariant="normal">`</mi><mi>p</mi><mo stretchy="false">|</mo><mi>x</mi><mtext> for some prime </mtext><mi>p</mi><mtext>”</mtext><mo>≡</mo><mi mathvariant="normal">`</mi><mi mathvariant="normal">`</mi><mo>∃</mo><mi>p</mi><mo>≤</mo><mi>x</mi><mrow><mo stretchy="false">(</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mtext>”</mtext><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\Phi_{2}:=``p\mbox{ is prime and }q|x\mbox{ for all primes }q\leq p\mbox{''}%
+\equiv``\forall q\leq p(P(p)\wedge P(q)\wedge(q|x))\mbox{''}" display="block"><mrow><msub><mi mathvariant="normal">Φ</mi><mn>2</mn></msub><mo>:=</mo><mi mathvariant="normal">`</mi><mi mathvariant="normal">`</mi><mi>p</mi><mtext> is prime and </mtext><mi>q</mi><mo stretchy="false">|</mo><mi>x</mi><mtext> for all primes </mtext><mi>q</mi><mo>≤</mo><mi>p</mi><mtext>”</mtext><mo>≡</mo><mi mathvariant="normal">`</mi><mi mathvariant="normal">`</mi><mo>∀</mo><mi>q</mi><mo>≤</mo><mi>p</mi><mrow><mo stretchy="false">(</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>∧</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mtext>”</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i1.p1.m8" class="ltx_Math" alttext="P(r):=" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mi></mi></mrow></math> “<math id="I1.i1.p1.m9" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is prime”, are primitive recursive by bounded quantification. Thus “<math id="I1.i1.p1.m10" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a sequence number” iff “<math id="I1.i1.p1.m11" class="ltx_Math" alttext="x=1" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> or <math id="I1.i1.p1.m12" class="ltx_Math" alttext="\Phi_{1}\rightarrow\Phi_{2}" display="inline"><mrow><msub><mi mathvariant="normal">Φ</mi><mn>1</mn></msub><mo>→</mo><msub><mi mathvariant="normal">Φ</mi><mn>2</mn></msub></mrow></math>” iff “<math id="I1.i1.p1.m13" class="ltx_Math" alttext="(x=1)\vee(\neg\Phi_{1}\vee\Phi_{2})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>=</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∨</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">¬</mi><msub><mi mathvariant="normal">Φ</mi><mn>1</mn></msub><mo>∨</mo><msub><mi mathvariant="normal">Φ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>”, is primitive recursive as a result.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="E_{k}(a_{1},\ldots,a_{k}):=p_{1}^{s(a_{1})}\cdots p_{k}^{s(a_{k})}" display="inline"><mrow><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></msubsup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msubsup><mi>p</mi><mi>k</mi><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></msubsup></mrow></mrow></math> is clearly primitive recursive.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\operatorname{lh}(x)" display="inline"><mrow><mi>lh</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be defined as the number of primes dividing <math id="I1.i3.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, which is primitive recursive.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="(x)_{y}" display="inline"><msub><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>y</mi></msub></math> can be defined as the exponent of the <math id="I1.i4.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-th prime in <math id="I1.i4.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> (the largest power of <math id="I1.i4.p1.m4" class="ltx_Math" alttext="p_{y}" display="inline"><msub><mi>p</mi><mi>y</mi></msub></math> dividing <math id="I1.i4.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>), which is again primitive recursive.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 2</span>. (Encoding via a pairing function) First, let <math id="p4.m1" class="ltx_Math" alttext="J:\mathbb{N}^{2}\to\mathbb{N}" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><msup><mi>ℕ</mi><mn>2</mn></msup><mo>→</mo><mi>ℕ</mi></mrow></mrow></math> be a (primitive recursive) pairing function. For any <math id="p4.m2" class="ltx_Math" alttext="n\geq 2" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow></math>, define</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle J_{2}(x_{1},x_{2})" display="inline"><mrow><msub><mi>J</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle J(x_{1},x_{2})" display="inline"><mrow><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle J_{n+1}(x_{1},\ldots,x_{n},x_{n+1})" display="inline"><mrow><msub><mi>J</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle J(x_{1},J_{n}(x_{2},\ldots,x_{n+1}))." display="inline"><mrow><mrow><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mrow><msub><mi>J</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then define <math id="p4.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> by</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle\langle\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle 0," display="inline"><mrow><mn>0</mn><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle\langle a_{1},\ldots,a_{k}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle J(k,J_{k}(a_{1},\ldots,a_{k}))." display="inline"><mrow><mrow><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mrow><msub><mi>J</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><math id="p5.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is primitive recursive because</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a bijection, so the predicate “<math id="I2.i1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a sequence number” is the same as “<math id="I2.i1.p1.m3" class="ltx_Math" alttext="x\in\mathbb{N}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>”, which is clearly primitive recursive,</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="E_{k}(a_{1},\ldots,a_{k}):=J(k,J_{k}(a_{1},\ldots,a_{k}))" display="inline"><mrow><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mrow><msub><mi>J</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is primitive recursive since both <math id="I2.i2.p1.m2" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> and <math id="I2.i2.p1.m3" class="ltx_Math" alttext="J_{k}" display="inline"><msub><mi>J</mi><mi>k</mi></msub></math> are, the latter of which can be shown to be primitive recursive by induction,</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">The two functions <math id="I2.i3.p1.m1" class="ltx_Math" alttext="R,L:\mathbb{N}\to\mathbb{N}" display="inline"><mrow><mrow><mi>R</mi><mo>,</mo><mi>L</mi></mrow><mo>:</mo><mrow><mi>ℕ</mi><mo>→</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I2.i3.p1.m2" class="ltx_Math" alttext="J(L(m),R(m))=m" display="inline"><mrow><mrow><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>m</mi></mrow></math> are primitive recursive. So <math id="I2.i3.p1.m3" class="ltx_Math" alttext="\operatorname{lh}(x)=L(x)" display="inline"><mrow><mrow><mi>lh</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> in particular is primitive recursive.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I2.i4.p1.m1" class="ltx_Math" alttext="J_{k}(a_{1},\ldots,a_{k})=b" display="inline"><mrow><mrow><msub><mi>J</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow></math>, then <math id="I2.i4.p1.m2" class="ltx_Math" alttext="a_{1}=L(b),a_{2}=LRL(b),\ldots,a_{k-1}=(LR)^{k-2}L(b)" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><mi>L</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>a</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>⁢</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math>, and <math id="I2.i4.p1.m3" class="ltx_Math" alttext="a_{k}=R(LR)^{k-2}L(b)" display="inline"><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>⁢</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Thus,</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="(x)_{y}=\left\{\begin{array}[]{ll}(LR)^{y}(x)&amp;\textrm{if }y&lt;L(x),\\
+R(LR)^{y}(x)&amp;\textrm{if }y=L(x),\\
+0&amp;\textrm{otherwise}.\end{array}\right." display="block"><mrow><msub><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>y</mi></msub><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>⁢</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow><mi>y</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>&lt;</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mi>R</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>⁢</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow><mi>y</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mtext>otherwise</mtext><mo>.</mo></mrow></mtd></mtr></mtable><mi></mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is primitive recursive, since each case is primitive recursive.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 3</span>. (Digital Representation) Pick a positive integers <math id="p6.m1" class="ltx_Math" alttext="p&gt;1" display="inline"><mrow><mi>p</mi><mo>&gt;</mo><mn>1</mn></mrow></math>. Define <math id="p6.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> by</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle\langle\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle 1" display="inline"><mn>1</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle\langle a\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mi>a</mi><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle p^{s(a)}" display="inline"><msup><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle\langle a_{1},\ldots,a_{k},a_{k+1}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle\langle a_{1}\rangle(\langle a_{2},\ldots,a_{k+1}\rangle+1)." display="inline"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">⟩</mo></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In other words,</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\langle a_{1},\ldots,a_{k}\rangle=p^{s(a_{1})}+p^{s(a_{1})+s(a_{2})}+\cdots p^%
+{s(a_{1})+\cdots+s(a_{k})}." display="block"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><msup><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></msup><mo>+</mo><msup><mi>p</mi><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></msup><mo>+</mo><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msup><mi>p</mi><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">To see that <math id="p6.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is primitive recursive, we first define three functions <math id="p6.m4" class="ltx_Math" alttext="f:\mathbb{N}\to\mathbb{N}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>ℕ</mi><mo>→</mo><mi>ℕ</mi></mrow></mrow></math> given by <math id="p6.m5" class="ltx_Math" alttext="f(x):=\operatorname{lo}(p,x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>lo</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, the exponent of <math id="p6.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> in <math id="p6.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="p6.m8" class="ltx_Math" alttext="g:\mathbb{N}\to\mathbb{N}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>ℕ</mi><mo>→</mo><mi>ℕ</mi></mrow></mrow></math> given by <math id="p6.m9" class="ltx_Math" alttext="g(x):=\operatorname{quo}(x,p^{f(x)})\dot{-}1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mi>quo</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><msup><mi>p</mi><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></msup><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mover accent="true"><mo>-</mo><mo>˙</mo></mover><mo>⁢</mo><mn>1</mn></mrow></mrow></math>, and <math id="p6.m10" class="ltx_Math" alttext="h:\mathbb{N}^{2}\to\mathbb{N}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><msup><mi>ℕ</mi><mn>2</mn></msup><mo>→</mo><mi>ℕ</mi></mrow></mrow></math> given by</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\displaystyle h(x,0)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m3" class="ltx_Math" alttext="\displaystyle x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle h(x,n+1)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m3" class="ltx_Math" alttext="\displaystyle g(h(x,n))." display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Clearly, <math id="p6.m11" class="ltx_Math" alttext="f,g,h" display="inline"><mrow><mi>f</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>h</mi></mrow></math> are all primitive recursive. Furthermore, <math id="p6.m12" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> has the property that if <math id="p6.m13" class="ltx_Math" alttext="h(x,n)&gt;0" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="p6.m14" class="ltx_Math" alttext="h(x,n+1)&lt;h(x,n)" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and therefore <math id="p6.m15" class="ltx_Math" alttext="h(x,n)=0" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for large enough <math id="p6.m16" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Using <math id="p6.m17" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math>, we may proceed to show that <math id="p6.m18" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is primitive recursive:</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">the predicate “<math id="I3.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a sequence number” is equivalent to the predicate</p>
+<p class="ltx_p ltx_align_center">“<math id="I3.i1.p1.m2" class="ltx_Math" alttext="(x=1)\vee((x&gt;0)\wedge(\forall n\;p|h(x,n)))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>=</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mo>∀</mo><mpadded width="+2.8pt"><mi>n</mi></mpadded><mi>p</mi><mo stretchy="false">|</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math>”</p>
+<p class="ltx_p">which is equivalent to the predicate</p>
+<p class="ltx_p ltx_align_center">“<math id="I3.i1.p1.m3" class="ltx_Math" alttext="(x=1)\vee((x&gt;0)\wedge(\forall n\leq x\;p|h(x,n)))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>=</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mo>∀</mo><mi>n</mi><mo>≤</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mi>p</mi><mo stretchy="false">|</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math>”</p>
+<p class="ltx_p">since <math id="I3.i1.p1.m4" class="ltx_Math" alttext="p&gt;1" display="inline"><mrow><mi>p</mi><mo>&gt;</mo><mn>1</mn></mrow></math>. As the quantification is bounded, the predicate is primitive recursive.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="E_{k}(a_{1},\ldots,a_{k})=\langle a_{1},\ldots,a_{k}\rangle" display="inline"><mrow><mrow><msub><mi>E</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">⟩</mo></mrow></mrow></math> is primitive recursive by equation (1) above.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i3.p1.m1" class="ltx_Math" alttext="\operatorname{lh}(x)" display="inline"><mrow><mi>lh</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be defined as the number of <math id="I3.i3.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that <math id="I3.i3.p1.m3" class="ltx_Math" alttext="h(x,n)\neq 0" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>, or</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\sum_{i=0}^{x}\operatorname{sgn}(h(x,i))," display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>x</mi></munderover><mrow><mi>sgn</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is primitive recursive, because it is a bounded sum.</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I3.i4.p1.m1" class="ltx_Math" alttext="\langle a_{1},\ldots,a_{k}\rangle=x" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mi>x</mi></mrow></math>, then <math id="I3.i4.p1.m2" class="ltx_Math" alttext="f(h(x,0))=s(a_{1}),\ldots,f(h(x,k-1))=s(a_{k})" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Therefore, <math id="I3.i4.p1.m3" class="ltx_Math" alttext="(x)_{y}" display="inline"><msub><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>y</mi></msub></math> is just <math id="I3.i4.p1.m4" class="ltx_Math" alttext="f(h(x,y\dot{-}1))\dot{-}1" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>y</mi><mo>⁢</mo><mover accent="true"><mo>-</mo><mo>˙</mo></mover><mo>⁢</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mo>-</mo><mo>˙</mo></mover><mo>⁢</mo><mn>1</mn></mrow></math>, which is primitive recursive.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. In the third example, <math id="p7.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> can be more generally defined so that</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\langle a_{1},\ldots,a_{k},a_{k+1}\rangle:=\langle a_{1}\rangle(r\langle a_{2}%
+,\ldots,a_{k+1}\rangle+q)," display="block"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">⟩</mo></mrow><mo>:=</mo><mrow><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">⟩</mo></mrow></mrow><mo>+</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">provided that <math id="p7.m2" class="ltx_Math" alttext="p,q" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math> are coprime. It is fairly straightforward to show that <math id="p7.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is again primitive recursive.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">examples of primitive recursive encoding</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExamplesOfPrimitiveRecursiveEncoding</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:06:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:06:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 94A60</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 68Q45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 68Q05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 03D20</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:42:48 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

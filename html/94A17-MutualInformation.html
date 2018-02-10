@@ -1,0 +1,182 @@
+<!DOCTYPE html><html>
+<head>
+<title>mutual information</title>
+<!--Generated on Sat Feb 10 13:41:47 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">mutual information</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> be a discrete probability space, and let <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="p1.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> be discrete random variables on <math id="p1.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">mutual information</em> <math id="p2.m1" class="ltx_Math" alttext="I[X;Y]" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math>, read as “the mutual information of <math id="p2.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="p2.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>,” is defined as</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle I[X;Y]" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\sum_{x\in\Omega}\sum_{y\in\Omega}\mu(X=x,Y=y)\log\frac{\mu(X=x,%
+Y=y)}{\mu(X=x)\mu(Y=y)}" display="inline"><mrow><mo>=</mo><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>x</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></munder></mstyle><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>y</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></munder></mstyle><mi>μ</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo>,</mo><mi>Y</mi><mo>=</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mi>log</mi><mstyle displaystyle="true"><mfrac><mrow><mi>μ</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo>,</mo><mi>Y</mi><mo>=</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>μ</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>μ</mi><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>=</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=D(\mu(x,y)||\mu(x)\mu(y))." display="inline"><mrow><mo>=</mo><mi>D</mi><mrow><mo stretchy="false">(</mo><mi>μ</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mo stretchy="false">|</mo><mi>μ</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>μ</mi><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m4" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> denotes the relative entropy.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Mutual information, or just information, is measured in bits if the logarithm is to the base 2, and in “nats” when using the natural logarithm.</p>
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Discussion</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">The most obvious characteristic of mutual information is that it depends on both <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. There is no information in a vacuum—information is always <em class="ltx_emph ltx_font_italic">about</em> something. In this case, <math id="S0.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="I[X;Y]" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math> is the information in <math id="S0.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> about <math id="S0.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. As its name suggests, mutual information is symmetric, <math id="S0.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="I[X;Y]=I[Y;X]" display="inline"><mrow><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo>;</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, so any information <math id="S0.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> carries about <math id="S0.SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, <math id="S0.SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> also carries about <math id="S0.SS0.SSS0.Px1.p1.m10" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">The definition in terms of relative entropy gives a useful interpretation of <math id="S0.SS0.SSS0.Px1.p2.m1" class="ltx_Math" alttext="I[X;Y]" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math> as a kind of “distance” between the joint distribution <math id="S0.SS0.SSS0.Px1.p2.m2" class="ltx_Math" alttext="\mu(x,y)" display="inline"><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> and the product distribution <math id="S0.SS0.SSS0.Px1.p2.m3" class="ltx_Math" alttext="\mu(x)\mu(y)" display="inline"><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Recall, however, that relative entropy is not a true distance, so this is just a conceptual tool. However, it does capture another intuitive notion of information. Remember that for <math id="S0.SS0.SSS0.Px1.p2.m4" class="ltx_Math" alttext="X,Y" display="inline"><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow></math> independent, <math id="S0.SS0.SSS0.Px1.p2.m5" class="ltx_Math" alttext="\mu(x,y)=\mu(x)\mu(y)" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Thus the relative entropy “distance” goes to zero, and we have <math id="S0.SS0.SSS0.Px1.p2.m6" class="ltx_Math" alttext="I[X;Y]=0" display="inline"><mrow><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> as one would expect for independent random variables.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">A number of useful expressions, most apparent from the definition, relate mutual information to the entropy <math id="S0.SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>:</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p4" class="ltx_para">
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle 0\leq I[X;Y]" display="inline"><mrow><mn>0</mn><mo>≤</mo><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m2" class="ltx_Math" alttext="\displaystyle\leq H[X]" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle I[X;Y]" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m2" class="ltx_Math" alttext="\displaystyle=H[X]-H[X|Y]" display="inline"><mrow><mo>=</mo><mi>H</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mo>-</mo><mi>H</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle I[X;Y]" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E3.m2" class="ltx_Math" alttext="\displaystyle=H[X]+H[Y]-H[X,Y]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow><mo>+</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle I[X;X]" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>;</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E4.m2" class="ltx_Math" alttext="\displaystyle=H[X]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px1.p5" class="ltx_para">
+<p class="ltx_p">Recall that the entropy <math id="S0.SS0.SSS0.Px1.p5.m1" class="ltx_Math" alttext="H[X]" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math> quantifies our uncertainty about <math id="S0.SS0.SSS0.Px1.p5.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. The last line justifies the description of entropy as “self-information.”</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Historical Notes</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Mutual information, or simply information, was introduced by Shannon in his landmark 1948 paper “A Mathematical Theory of Communication.”
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">mutual information</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MutualInformation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:37:35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:37:35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">drummond (72)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">drummond (72)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">drummond (72)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 94A17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">information</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RelativeEntropy</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Entropy</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ShannonsTheoremEntropy</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DynamicStream</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">information</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">mutual information</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:41:47 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

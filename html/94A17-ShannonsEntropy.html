@@ -1,0 +1,396 @@
+<!DOCTYPE html><html>
+<head>
+<title>Shannon’s entropy</title>
+<!--Generated on Sat Feb 10 13:41:54 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Shannon’s entropy</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Definition (Discrete)</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a discrete random variable on a finite set
+<math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="\mathcal{X}=\{x_{1},\ldots,x_{n}\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math>, with probability distribution
+function <math id="S0.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="p(x)=\Pr(X=x)" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>=</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The <span class="ltx_text ltx_font_italic">entropy</span> <math id="S0.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="H(X)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="S0.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is
+defined as</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="H(X)=-\sum_{x\in\mathcal{X}}p(x)\log_{b}p(x)." display="block"><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>x</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒳</mi></mrow></munder><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi>log</mi><mi>b</mi></msub><mo>⁡</mo><mi>p</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The convention <math id="S0.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="0\log 0=0" display="inline"><mrow><mrow><mn>0</mn><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mn>0</mn></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> is adopted in the definition. The
+logarithm is usually taken to the base 2, in which case the
+entropy is measured in “bits,” or to the base <span class="ltx_text ltx_font_italic">e</span>, in which case
+<math id="S0.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="H(X)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is measured in “nats.”</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S0.SS0.SSS0.Px1.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S0.SS0.SSS0.Px1.p2.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> are random variables on <math id="S0.SS0.SSS0.Px1.p2.m3" class="ltx_Math" alttext="\mathcal{X}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒳</mi></math> and
+<math id="S0.SS0.SSS0.Px1.p2.m4" class="ltx_Math" alttext="\mathcal{Y}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒴</mi></math> respectively, the <span class="ltx_text ltx_font_italic">joint entropy</span> of <math id="S0.SS0.SSS0.Px1.p2.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S0.SS0.SSS0.Px1.p2.m6" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>
+is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="H(X,Y)=-\sum_{(x,y)\in\mathcal{X}\times\mathcal{Y}}p(x,y)\log_{b}p(x,y)," display="block"><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒴</mi></mrow></mrow></munder><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi>log</mi><mi>b</mi></msub><mo>⁡</mo><mi>p</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS0.SSS0.Px1.p2.m7" class="ltx_Math" alttext="p(x,y)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote the joint distribution of <math id="S0.SS0.SSS0.Px1.p2.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S0.SS0.SSS0.Px1.p2.m9" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Discussion</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">The Shannon entropy was first introduced by Shannon in 1948 in his
+landmark paper “A Mathematical Theory of Communication.” The
+entropy is a functional of the probability distribution function
+<math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="p(x)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and is sometime written as</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="H(p(x_{1}),p(x_{2}),\ldots,p(x_{n}))." display="block"><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is noted that the entropy of <math id="S0.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> does not depend on the actual
+values of <math id="S0.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, it only depends on <math id="S0.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="p(x)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>. The definition of
+Shannon’s entropy can be written as an expectation</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="H(X)=-E[\log_{b}p(X)]." display="block"><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><msub><mi>log</mi><mi>b</mi></msub><mo>⁡</mo><mi>p</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The quantity <math id="S0.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="-\log_{b}p(x)" display="inline"><mrow><mo>-</mo><mrow><mrow><msub><mi>log</mi><mi>b</mi></msub><mo>⁡</mo><mi>p</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is interpreted as the information
+content of the outcome <math id="S0.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="x\in\mathcal{X}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒳</mi></mrow></math>, and is also called the Hartley
+information of <math id="S0.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. Hence the Shannon’s entropy is the average
+amount of information contained in random variable <math id="S0.SS0.SSS0.Px2.p1.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, it is also
+the uncertainty removed after the actual outcome of <math id="S0.SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is
+revealed.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Characterization</h2>
+
+<div id="S0.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">We write <math id="S0.SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="H(X)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> as <math id="S0.SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="H_{n}(p_{1},\ldots,p_{n})" display="inline"><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>. The Shannon entropy
+satisfies the following properties.</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p2" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For any <math id="I1.i1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="I1.i1.p1.m2" class="ltx_Math" alttext="H_{n}(p_{1},\ldots,p_{n})" display="inline"><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is a continuous and
+symmetric function on variables <math id="I1.i1.p1.m3" class="ltx_Math" alttext="p_{1}" display="inline"><msub><mi>p</mi><mn>1</mn></msub></math>, <math id="I1.i1.p1.m4" class="ltx_Math" alttext="p_{2},\ldots,p_{n}" display="inline"><mrow><msub><mi>p</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Event of probability zero does not contribute to the entropy, i.e. for any <math id="I1.i2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>,</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="H_{n+1}(p_{1},\ldots,p_{n},0)=H_{n}(p_{1},\ldots,p_{n})." display="block"><mrow><mrow><mrow><msub><mi>H</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Entropy is maximized when the probability distribution is
+uniform. For all <math id="I1.i3.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="H_{n}(p_{1},\ldots,p_{n})\leq H_{n}\Big{(}\frac{1}{n},\ldots,\frac{1}{n}\Big{)}." display="block"><mrow><mrow><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This follows from Jensen inequality,</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="H(X)=E\Big{[}\log_{b}\Big{(}\frac{1}{p(X)}\Big{)}\Big{]}\leq\log_{b}\Big{(}E%
+\Big{[}\frac{1}{p(X)}\Big{]}\Big{)}=\log_{b}(n)." display="block"><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><msub><mi>log</mi><mi>b</mi></msub><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mn>1</mn><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo>≤</mo><mrow><msub><mi>log</mi><mi>b</mi></msub><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mfrac><mn>1</mn><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>log</mi><mi>b</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i4.p1.m1" class="ltx_Math" alttext="p_{ij}" display="inline"><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>, <math id="I1.i4.p1.m2" class="ltx_Math" alttext="1\leq i\leq m" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>m</mi></mrow></math>, <math id="I1.i4.p1.m3" class="ltx_Math" alttext="1\leq j\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></math> are
+non-negative real numbers summing up to one, and <math id="I1.i4.p1.m4" class="ltx_Math" alttext="q_{i}=\sum_{j=1}^{n}p_{ij}" display="inline"><mrow><msub><mi>q</mi><mi>i</mi></msub><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></math>, then</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="H_{mn}(p_{11},\ldots,p_{mn})=H_{m}(q_{1},\ldots,q_{m})+\sum_{i=1}^{m}q_{i}H_{n%
+}\Big{(}\frac{p_{i1}}{q_{i}},\ldots,\frac{p_{in}}{q_{i}}\Big{)}." display="block"><mrow><mrow><mrow><msub><mi>H</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>11</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>H</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>q</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>q</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><msub><mi>q</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mn>1</mn></mrow></msub><msub><mi>q</mi><mi>i</mi></msub></mfrac><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mfrac><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><msub><mi>q</mi><mi>i</mi></msub></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we partition the <math id="I1.i4.p1.m5" class="ltx_Math" alttext="mn" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></math> outcomes of the random experiment into
+<math id="I1.i4.p1.m6" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> groups, each group contains <math id="I1.i4.p1.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> elements, we can do the
+experiment in two steps: first determine the group to which the
+actual outcome belongs to, and second find the outcome in this
+group. The probability that you will observe group <math id="I1.i4.p1.m8" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> is <math id="I1.i4.p1.m9" class="ltx_Math" alttext="q_{i}" display="inline"><msub><mi>q</mi><mi>i</mi></msub></math>.
+The conditional probability distribution function given group <math id="I1.i4.p1.m10" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>
+is <math id="I1.i4.p1.m11" class="ltx_Math" alttext="(p_{i1}/q_{i},\ldots,p_{in}/q_{i})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mn>1</mn></mrow></msub><mo>/</mo><msub><mi>q</mi><mi>i</mi></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>/</mo><msub><mi>q</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></math>. The entropy</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="H_{n}\Big{(}\frac{p_{i1}}{q_{i}},\ldots,\frac{p_{in}}{q_{i}}\Big{)}" display="block"><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mn>1</mn></mrow></msub><msub><mi>q</mi><mi>i</mi></msub></mfrac><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mfrac><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><msub><mi>q</mi><mi>i</mi></msub></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is the entropy of the probability distribution conditioned on
+group <math id="I1.i4.p1.m12" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>. Property 4 says that the total information is the sum
+of the information you gain in the first step, <math id="I1.i4.p1.m13" class="ltx_Math" alttext="H_{m}(q_{1},\ldots,q_{m})" display="inline"><mrow><msub><mi>H</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>q</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>q</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>, and a weighted sum of the entropies conditioned on each
+group.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS0.SSS0.Px3.p3" class="ltx_para">
+<p class="ltx_p">Khinchin in 1957 showed that the only function satisfying the
+above assumptions is of the form:</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="H_{n}(p_{1},\ldots,p_{n})=-k\sum_{i=1}^{n}p_{i}\log p_{i}" display="block"><mrow><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS0.SSS0.Px3.p3.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a positive constant, essentially a choice of unit of
+measure.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Definition (Continuous)</h2>
+
+<div id="S0.SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">Entropy in the continuous case is called <em class="ltx_emph ltx_font_italic">differential entropy (<span class="ltx_text ltx_font_typewriter ltx_font_upright">http://planetmath.org/DifferentialEntropy</span>)</em>.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px5" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Discussion—Continuous Entropy</h2>
+
+<div id="S0.SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">Despite its seductively analogous form, continuous entropy cannot be obtained as a limiting case of discrete entropy.</p>
+</div>
+<div id="S0.SS0.SSS0.Px5.p2" class="ltx_para">
+<p class="ltx_p">We wish to obtain a generally finite measure as the “bin size” goes to zero. In the discrete case, the bin size is the (implicit) width of each of the <math id="S0.SS0.SSS0.Px5.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> (finite or infinite) bins/buckets/states whose probabilities are the <math id="S0.SS0.SSS0.Px5.p2.m2" class="ltx_Math" alttext="p_{n}" display="inline"><msub><mi>p</mi><mi>n</mi></msub></math>. As we generalize to the continuous domain, we must make this width explicit.</p>
+</div>
+<div id="S0.SS0.SSS0.Px5.p3" class="ltx_para">
+<p class="ltx_p">To do this, start with a continuous function <math id="S0.SS0.SSS0.Px5.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> discretized as shown in the figure:
+
+<br class="ltx_break"></p>
+</div>
+<figure id="S0.F1" class="ltx_figure">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Discretizing the function <math id="S0.F1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> into bins of width <math id="S0.F1.m4" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math></figcaption><img src="function-with-bins.eps" id="S0.F1.g1" class="ltx_graphics ltx_centering" alt="">
+</figure>
+<div id="S0.SS0.SSS0.Px5.p4" class="ltx_para">
+<p class="ltx_p">As the figure indicates, by the mean-value theorem there exists a value <math id="S0.SS0.SSS0.Px5.p4.m1" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math> in each bin such that</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="f(x_{i})\Delta=\int_{i\Delta}^{(i+1)\Delta}f(x)dx" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi></mrow></msubsup><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and thus the integral of the function <math id="S0.SS0.SSS0.Px5.p4.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be approximated (in the Riemannian sense) by</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="\int_{-\infty}^{\infty}f(x)dx=\lim_{\Delta\to 0}\sum_{i=-\infty}^{\infty}f(x_{%
+i})\Delta" display="block"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi mathvariant="normal">Δ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where this limit and “bin size goes to zero” are equivalent.</p>
+</div>
+<div id="S0.SS0.SSS0.Px5.p5" class="ltx_para">
+<p class="ltx_p">We will denote</p>
+<table id="S0.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E4.m1" class="ltx_Math" alttext="H^{\Delta}:=-\sum_{i=-\infty}^{\infty}\Delta f(x_{i})\log\Delta f(x_{i})" display="block"><mrow><msup><mi>H</mi><mi mathvariant="normal">Δ</mi></msup><mo>:=</mo><mrow><mo>-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and expanding the <math id="S0.SS0.SSS0.Px5.p5.m1" class="ltx_Math" alttext="\log" display="inline"><mi>log</mi></math> we have</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E5.m1" class="ltx_Math" alttext="\displaystyle H^{\Delta}" display="inline"><msup><mi>H</mi><mi mathvariant="normal">Δ</mi></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E5.m2" class="ltx_Math" alttext="\displaystyle=-\sum_{i=-\infty}^{\infty}\Delta f(x_{i})\log\Delta f(x_{i})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+<tbody id="S0.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E6.m2" class="ltx_Math" alttext="\displaystyle=-\sum_{i=-\infty}^{\infty}\Delta f(x_{i})\log f(x_{i})-\sum_{i=-%
+\infty}^{\infty}f(x_{i})\Delta\log\Delta." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Δ</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">As <math id="S0.SS0.SSS0.Px5.p5.m2" class="ltx_Math" alttext="\Delta\to 0" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>→</mo><mn>0</mn></mrow></math>, we have
+</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E7.m1" class="ltx_Math" alttext="\displaystyle\sum_{i=-\infty}^{\infty}f(x_{i})\Delta" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E7.m2" class="ltx_Math" alttext="\displaystyle\to\int f(x)dx=1\qquad\text{and}" display="inline"><mrow><mrow><mi></mi><mo>→</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mstyle><mo>=</mo><mn>1</mn></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>and</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+<tbody id="S0.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E8.m1" class="ltx_Math" alttext="\displaystyle\sum_{i=-\infty}^{\infty}\Delta f(x_{i})\log f(x_{i})" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E8.m2" class="ltx_Math" alttext="\displaystyle\to\int f(x)\log f(x)dx" display="inline"><mrow><mi></mi><mo>→</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This leads us to our definition of the differential entropy (continuous entropy):</p>
+<table id="S0.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E9.m1" class="ltx_Math" alttext="h[f]=\lim_{\Delta\to 0}\left[H^{\Delta}+\log\Delta\right]=-\int_{-\infty}^{%
+\infty}f(x)\log f(x)dx." display="block"><mrow><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi mathvariant="normal">Δ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mo>[</mo><mrow><msup><mi>H</mi><mi mathvariant="normal">Δ</mi></msup><mo>+</mo><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Δ</mi></mrow></mrow><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px5.p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Shannon’s entropy</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ShannonsEntropy</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:00:53</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:00:53</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">kshum (5987)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">kshum (5987)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">26</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">kshum (5987)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 94A17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">entropy</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Shannon entropy</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Logarithm</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ConditionalEntropy</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MutualInformation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DifferentialEntropy</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HartleyFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">joint entropy</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:41:54 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
