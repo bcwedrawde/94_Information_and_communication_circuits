@@ -38,7 +38,7 @@
 <span class="ltx_tag ltx_tag_section">1 </span>Substitution cyphers</h2>
 
 <div id="S1.p1" class="ltx_para">
-<p class="ltx_p">Perhaps the simplest method of encryption is the additive cypher, in which a fixed value is added to each value of the plaintext. For the first example, Bob will add 13 to the ASCII value of each character of our sample message (thus 13 is the private key). The encoded message is then:</p>
+<p class="ltx_p">Perhaps the simplest method of encryption is the <a class="nnexus_concept" href="http://planetmath.org/additivefunction1">additive</a> cypher, in which a fixed value is added to each value of the <a class="nnexus_concept" href="http://planetmath.org/cryptography">plaintext</a>. For the first example, Bob will add 13 to the ASCII value of each <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">character</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Character.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/characterofafinitegroup"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/multiplicativelinearfunctional"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/character"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of our sample message (thus 13 is the private key). The encoded message is then:</p>
 </div>
 <div id="S1.p2" class="ltx_para">
 <table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
@@ -51,7 +51,7 @@
 </table>
 </div>
 <div id="S1.p3" class="ltx_para">
-<p class="ltx_p">which looks like gibberish but is vulnerable to frequency analysis. The character R occurs three times, more than any other character, and it probably stands for the letter E, the most statistically frequent letter in English. (If modular arithmetic is used to keep the values within a certain range, then these cyphers are called rotation or shift cyphers).</p>
+<p class="ltx_p">which looks like gibberish but is vulnerable to frequency analysis. The character R occurs three times, more than any other character, and it probably stands for the letter E, the most statistically frequent letter in English. (If <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">modular arithmetic</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/ModularArithmetic.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/mathbbzn"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> is used to keep the values within a certain range, then these cyphers are called rotation or shift cyphers).</p>
 </div>
 <div id="S1.p4" class="ltx_para">
 <p class="ltx_p">One way of defeating frequency analysis is by adding a different value to each character depending on the position, according to a code word. For example, if we add the values of the word code to our sample message, then subtract 128 from any values above 128 (to avoid issues with characters not supported by PlanetMath) the encoded message would look something like this:</p>
@@ -70,7 +70,7 @@
 <p class="ltx_p">If this was a longer message, it might become very easy to determine the length of the code word and find trigrams that by some lucky coincidence get encoded the same each time.</p>
 </div>
 <div id="S1.p7" class="ltx_para">
-<p class="ltx_p">Other operations besides addition can be used: bitwise exclusive OR, for example. If we XOR our sample message with the word code repeated enough times to match the length of the message, the encoded message looks like:</p>
+<p class="ltx_p">Other operations besides <a class="nnexus_concept" href="http://planetmath.org/addition">addition</a> can be used: bitwise exclusive OR, for example. If we XOR our sample message with the word code repeated enough times to match the length of the message, the encoded message looks like:</p>
 </div>
 <div id="S1.p8" class="ltx_para">
 <table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
@@ -107,7 +107,7 @@
 </table>
 </div>
 <div id="S2.p3" class="ltx_para">
-<p class="ltx_p">Of course it’s entirely possible to use both a substitution cypher and a permutation cypher.</p>
+<p class="ltx_p">Of course it’s entirely possible to use both a substitution cypher and a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">permutation</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Permutation.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/permutation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> cypher.</p>
 </div>
 <div id="S2.p4" class="ltx_para">
 <table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
@@ -125,26 +125,26 @@
 <span class="ltx_tag ltx_tag_section">3 </span>Public key cryptography</h2>
 
 <div id="S3.p1" class="ltx_para">
-<p class="ltx_p">To remedy these problems, public key cryptography was invented. In such systems, each sender recipient has both private and public keys. The public keys may be freely divulged. If the interceptor obtained Bob’s private key, the system would be only partially compromised; Alice and Carol could continue to use the system with their own private and public keys just as before.</p>
+<p class="ltx_p">To remedy these problems, <a class="nnexus_concept" href="http://planetmath.org/publickeycryptography">public key cryptography</a> was invented. In such systems, each sender recipient has both private and public keys. The public keys may be freely divulged. If the interceptor obtained Bob’s private key, the system would be only partially compromised; Alice and Carol could continue to use the system with their own private and public keys just as before.</p>
 </div>
 <section id="S3.SS1" class="ltx_subsection">
 <h3 class="ltx_title ltx_title_subsection">
 <span class="ltx_tag ltx_tag_subsection">3.1 </span>Rivest, Shamir and Adlemann</h3>
 
 <div id="S3.SS1.p1" class="ltx_para">
-<p class="ltx_p">Perhaps the best known public key system is RSA. Even though our sample message is relatively short, it requires large numbers to properly encrypt using RSA. A toy example might be helpful to elucidate the principle before trying it out with larger numbers. Alice chooses two primes, 2 and 5. Their product is 10, which has 4 coprimes below it. Alice then chooses a number that is coprime to 4, in this example, 3. She publishes her public key, which consists of the public modulus, 10, and the public exponent, 3. For her private key, Alice chooses a number whose product with the public exponent will leave a remainder of 1 when divided by the coprime count of the public modulus. Alice chooses 11, which multiplied by 3 is 33, and that divided by 4 leaves a remainder of 1. The number 11 is Alice’s private key, which she does not publish.</p>
+<p class="ltx_p">Perhaps the best known public key system is RSA. Even though our sample message is relatively short, it requires large numbers to properly encrypt using RSA. A toy example might be helpful to elucidate the principle before trying it out with larger numbers. Alice chooses two primes, 2 and 5. Their product is 10, which has 4 <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">coprimes</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Coprime.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/coprime"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> below it. Alice then chooses a number that is coprime to 4, in this example, 3. She publishes her public key, which consists of the public <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">modulus</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Modulus.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/modulus"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, 10, and the public <a class="nnexus_concept" href="http://planetmath.org/exponent">exponent</a>, 3. For her private key, Alice chooses a number whose product with the public exponent will leave a <a class="nnexus_concept" href="http://planetmath.org/longdivision">remainder</a> of 1 when divided by the coprime count of the public modulus. Alice chooses 11, which multiplied by 3 is 33, and that divided by 4 leaves a remainder of 1. The number 11 is Alice’s private key, which she does not publish.</p>
 </div>
 <div id="S3.SS1.p2" class="ltx_para">
 <p class="ltx_p">In this toy example, Bob wants to send Alice a single bell character, which has ASCII code point 7. Bob raises 7 to the power of the public exponent, 3, which gives 343. Next, he divides 343 by the public modulus, 10, and this leaves a remainder of 3. Bob sends Alice the 3. To decrypt the 3, Alice raises it to the power of her private key, 11, which gives 177147. Divide by 10, that leaves as remainder 7, which is the bell character Bob intended to send.</p>
 </div>
 <div id="S3.SS1.p3" class="ltx_para">
-<p class="ltx_p">To show that this toy example is not at all secure, suppose Isaac intercepts the 3 Bob sent Alice. Isaac looks up Alice’s public key and on sight factors 10 and calculates the coprime count without the aid of pencil and paper. He doesn’t need to know Alice’s private key, any number that multiplied by the public exponent is one more than a multiple of the coprime count of the public modulus will do just fine. Isaac tries 15. Raising 3 to the 15th power gives 14348907, and dividing that by 10 leaves 7, Bob’s bell character.</p>
+<p class="ltx_p">To show that this toy example is not at all secure, suppose Isaac intercepts the 3 Bob sent Alice. Isaac looks up Alice’s public key and on sight factors 10 and calculates the coprime count without the aid of pencil and paper. He doesn’t need to know Alice’s private key, any number that multiplied by the public exponent is one more than a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">multiple</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Multiple.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/generalassociativity"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/divisibility"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of the coprime count of the public modulus will do just fine. Isaac tries 15. Raising 3 to the 15th power gives 14348907, and dividing that by 10 leaves 7, Bob’s bell character.</p>
 </div>
 <div id="S3.SS1.p4" class="ltx_para">
 <p class="ltx_p">Now we may try a slightly more secure example. Alice chooses two primes, 264518000000000083787 and 26551900000000000001459. Their product is 7023455484200002225089977062000000122245233, which has 7023455484200002225063160644000000122159988 coprimes below it. Alice then chooses a number that is coprime to 7023455484200002225063160644000000122159988, in this example, 47. She publishes her public key, consisting of the public modulus, 7023455484200002225089977062000000122245233, and the public exponent, 47. For her private key, Alice chooses a number whose product with the public exponent will leave a remainder of 1 when divided by the coprime count of the public modulus. Alice chooses 33 as her private key (since dividing 7023455484200002225063160644000000122159988 by 1551 has a remainder of 1).</p>
 </div>
 <div id="S3.SS1.p5" class="ltx_para">
-<p class="ltx_p">To send Alice the sample message, Bob concatenates the binary (or octal or hexadecimal) into a single number, which works out to 6996991386928867305761549997581651468502340 in base 10, raises it to the 47th power and divides it by the public modulus, 7023455484200002225089977062000000122245233. This is 5535233383186699571489193472876956086355524, which converted to base 16 and interpreted in ASCII gives the encrypted message that might look something like</p>
+<p class="ltx_p">To send Alice the sample message, Bob concatenates the binary (or octal or <a class="nnexus_concept" href="http://planetmath.org/hexadecimal">hexadecimal</a>) into a single number, which works out to 6996991386928867305761549997581651468502340 in base 10, raises it to the 47th power and divides it by the public modulus, 7023455484200002225089977062000000122245233. This is 5535233383186699571489193472876956086355524, which converted to base 16 and interpreted in ASCII gives the encrypted message that might look something like</p>
 </div>
 <div id="S3.SS1.p6" class="ltx_para">
 <table id="S3.Ex7" class="ltx_equation ltx_eqn_table">
@@ -163,7 +163,7 @@
 <p class="ltx_p">To decode this message, Alice raises 5535233383186699571489193472876956086355524 to the power of her private key, 33, and divides that by the public modulus, leaving a remainder of</p>
 </div>
 <div id="S3.SS1.p9" class="ltx_para">
-<p class="ltx_p">The only way to decrypt the message without having Alice’s private key is to factor the integers of the public key. 7023455484200002225089977062000000122245233 looks intimidating to factor by hand, but a program like Mathematica can factor it in about five seconds. In real life, much larger primes and products are necessary.</p>
+<p class="ltx_p">The only way to decrypt the message without having Alice’s private key is to factor the <a class="nnexus_concept" href="http://mathworld.wolfram.com/Integer.html">integers</a> of the public key. 7023455484200002225089977062000000122245233 looks intimidating to factor by hand, but a program like Mathematica can factor it in about five seconds. In real life, much larger primes and products are necessary.</p>
 </div>
 <div id="S3.SS1.p10" class="ltx_para">
 <p class="ltx_p">To decode the message, Alice raises the number of the message to the power of her private key, modulated by 59701.</p>
@@ -210,7 +210,7 @@
 <td class="ltx_td ltx_align_left ltx_border_r">Example</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 94A60</td>
 </tr>
 </tbody>
